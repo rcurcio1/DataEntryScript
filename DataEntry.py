@@ -72,20 +72,17 @@ while True:
 
     # Determine next invoice date and next payment date from whether the current date is before the 15th
     if day <= 15:
-        deal_array.append(month + 1)
-        deal_array.append(1)
-        deal_array.append(year)
-        deal_array.append(month)
-        deal_array.append(15)
-        deal_array.append(year)
+        offset = 0
     else:
-        deal_array.append(month + 2)
-        deal_array.append(1)
-        deal_array.append(year)
-        deal_array.append(month + 1)
-        deal_array.append(15)
-        deal_array.append(year)
-
+        offset = 1
+    
+    deal_array.append(month + 1 + offset)
+    deal_array.append(1)
+    deal_array.append(year)
+    deal_array.append(month + offset)
+    deal_array.append(15)
+    deal_array.append(year)
+    
     deal_array.append(term - payments_remaining)
     deal_array.append(payments_remaining)
     for i in range(2):

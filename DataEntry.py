@@ -5,7 +5,8 @@ import math
 import csv
 
 # Array of arrays to hold each deal entered
-data = []
+portfolio_master = []
+deposit_log = []
 
 while True:
     # Retrieve information for one deal from command line
@@ -88,7 +89,23 @@ while True:
     for i in range(2):
         deal_array.append("")
     deal_array.append("EFA")
-    data.append(deal_array)
+    portfolio_master.append(deal_array)
+
+    deposit_log_array = []
+    deposit_log_array.append(advance + doc_fee)
+    deposit_log_array.append(agreement_number)
+    deposit_log_array.append(customer)
+    deposit_log_array.append("Adv & Doc Fee")
+
+    deposit_log.append(deposit_log_array)
+    
+    if not insurance == 0:
+        insurance_array = []
+        insurance_array.append(insurance)
+        insurance_array.append(agreement_number)
+        insurance_array.append(customer)
+        insurance_array.append("GA Ins")
+        deposit_log.append(insurance_array)
 
     # Ask the user if they would like to enter another deal, exit loop if not
     another = input("Would you like to enter another deal? (Y/N) ")
@@ -97,6 +114,8 @@ while True:
 # Open csv file and write the information from the deals
 with open('eggs.csv', 'w', newline='') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',')
-    for row in data:
+    for row in portfolio_master:
+        spamwriter.writerow(row)
+    for row in deposit_log:
         spamwriter.writerow(row)
     

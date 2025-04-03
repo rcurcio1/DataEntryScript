@@ -1,11 +1,14 @@
 import pandas as pd
 import numpy as np
 from datetime import date
+import math
 import csv
 
+# Array of arrays to hold each deal entered
 data = []
 
 while True:
+    # Retrieve information for one deal from command line
     paynet = input("Enter PayNet score: ")
     softpull = input("Enter CBR: ")
     time_in_business = input("Enter the number of years in business: ")
@@ -24,24 +27,19 @@ while True:
 
     insurance = input("Enter the monthly insurance amount: ")
 
-    if payments_remaining <= 12:
-        term = 12
-    elif payments_remaining <=24:
-        term = 24
-    elif payments_remaining <= 36:
-        term = 36
-    elif payments_remaining <= 48:
-        term = 48
-    else:
-        term = 60
+    # Determine length of full term from the payments remaining
+    term = math.ceil(payments_remaining / 12) * 12
 
+    # Initialize deal array
     deal_array = []
     deal_array.append("ACH")
-    
+
+    # Only add insurance statement if they are paying insurance
     if int(insurance) == 0:
         deal_array.append("")
     else:
         deal_array.append("$" + insurance + "/Star Monthly GA")
+    
     deal_array.append(titled)
     deal_array.append("")
     deal_array.append(customer)
@@ -65,14 +63,14 @@ while True:
     deal_array.append(term)
     for i in range(3):
         deal_array.append("")
-
+    
+    # Get today's date
     today = date.today()
-
-    # dd/mm/YY
     day = int(today.strftime("%d"))
     month = int(today.strftime("%m"))
     year = int(today.strftime("%Y"))
 
+    # Determine next invoice date and next payment date from whether the current date is before the 15th
     if day <= 15:
         deal_array.append(month + 1)
         deal_array.append(1)
@@ -95,10 +93,11 @@ while True:
     deal_array.append("EFA")
     data.append(deal_array)
 
-    quit = input("Enter Q to quit: ")
-    if quit == "Q" or quit == "q":
+    # Ask the user if they would like to enter another deal, exit loop if not
+    another = input("Would you like to enter another deal? (Y/N) ")
+    if another == "N" or another == "n":
         break
-    
+# Open csv file and write the information from the deals
 with open('eggs.csv', 'w', newline='') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',')
     for row in data:

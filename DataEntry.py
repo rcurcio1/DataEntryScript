@@ -37,7 +37,11 @@ while True:
 
     deal_array = []
     deal_array.append("ACH")
-    deal_array.append("$" + insurance + "/Star Monthly GA")
+    
+    if int(insurance) == 0:
+        deal_array.append("")
+    else:
+        deal_array.append("$" + insurance + "/Star Monthly GA")
     deal_array.append(titled)
     deal_array.append("")
     deal_array.append(customer)

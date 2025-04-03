@@ -47,6 +47,7 @@ while True:
     deal_array.append(time_in_business)
 
     deal_array.append(equipment)
+    deal_array.append(amount_financed)
     deal_array.append("")
     deal_array.append(monthly)
     deal_array.append(monthly+insurance)

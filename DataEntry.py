@@ -91,6 +91,7 @@ while True:
     deal_array.append("EFA")
     portfolio_master.append(deal_array)
 
+    # Initialize array for Adv & Doc Fee line in deposit log
     deposit_log_array = []
     deposit_log_array.append(advance + doc_fee)
     deposit_log_array.append(agreement_number)
@@ -98,7 +99,8 @@ while True:
     deposit_log_array.append("Adv & Doc Fee")
 
     deposit_log.append(deposit_log_array)
-    
+
+    # If there is insurance, add insurance line to deposit log
     if not insurance == 0:
         insurance_array = []
         insurance_array.append(insurance)

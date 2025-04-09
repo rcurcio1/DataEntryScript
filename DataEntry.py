@@ -40,30 +40,19 @@ while True:
         deal_array.append("")
     else:
         deal_array.append("$" + insurance + "/Star Monthly GA")
-    
-    deal_array.append(titled)
-    deal_array.append("")
-    deal_array.append(customer)
-    deal_array.append(agreement_number)
-    deal_array.append(paynet)
-    deal_array.append(softpull)
-    deal_array.append(time_in_business)
+    # Add initial information
+    deal_array += [titled, "", customer, agreement_number]
 
-    deal_array.append(equipment)
-    deal_array.append(amount_financed)
-    deal_array.append("")
-    deal_array.append(monthly)
-    deal_array.append(monthly+insurance)
-    deal_array.append(advance)
-    deal_array.append(doc_fee)
-    deal_array.append("EFA")
-    for i in range(5):
-        deal_array.append("$0.00")
-    deal_array.append("")
-    deal_array.append(state)
-    deal_array.append(term)
-    for i in range(3):
-        deal_array.append("")
+    #Add credit information
+    deal_array += [paynet, softpull, time_in_business, equipment]
+
+    #Add monetary information
+    deal_array += [amount_financed, "", monthly, monthly+insurance, advance, doc_fee)
+
+    # Add taxes
+    deal_array += ["EFA", "$0.00", "$0.00", "$0.00", "$0.00", "$0.00", ""]
+    
+    deal_array += ["", state, term, "", "", ""]
     
     # Get today's date
     today = date.today()
@@ -76,19 +65,14 @@ while True:
         offset = 0
     else:
         offset = 1
-    
-    deal_array.append(month + 1 + offset)
-    deal_array.append(1)
-    deal_array.append(year)
-    deal_array.append(month + offset)
-    deal_array.append(15)
-    deal_array.append(year)
-    
-    deal_array.append(term - payments_remaining)
-    deal_array.append(payments_remaining)
-    for i in range(2):
-        deal_array.append("")
-    deal_array.append("EFA")
+
+    # Add dates of first invoice and payment
+    deal_array += [month + 1 + offset, 1, year, month + offset, 15, year]
+
+    # Add final information
+    deal_array += [term - payments_remaining, payments_remaining, "", "", "EFA"]
+
+    # Add deal to portfolio master
     portfolio_master.append(deal_array)
 
     # Initialize array for Adv & Doc Fee line in deposit log

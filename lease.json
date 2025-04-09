@@ -1,0 +1,91 @@
+{
+  "Lease Number" :
+  "Remit To" :
+  "Customer" :
+  "Lease Name 1" :
+  "Lease Name 2" :
+  "Contact" :
+  "Email Address" :
+  "Telephone 1" :
+  "Telephone 2" :
+  "Telephone 3" :
+  "Address 1" :
+  "Address 2" :
+  "City" :
+  "County" :
+  "State" :	
+  "Zip Code 5" :
+  "Zip Code 4" :	
+  "Payment Start Date Year" :
+  "Payment Start Date Month" :	
+  "Payment Start Date Day" :	
+  "Accrual Start Date Year" :	
+  "Accrual Start Date Month" :	
+  "Accrual Start Date Day" :	
+  "Accrual End Date Year" :	
+  "Accrual End Date Month" :	
+  "Accrual End Date Day" :	
+  "(S)top" : 
+  "(H)old" :	
+  "Depreciation Stop Date Year" :	
+  "Depreciation Stop Date Month" :	
+  "Depreciation Stop Date Day" :	
+  "Lease Term" :	
+  "Compounding Frequency" :	
+  "(A)dvance A(R)rears" :	
+  "Paperless	Contract Type" :	
+  "Billing Status" :	
+  "Billing Group" :	
+  "Delinquency Group" :	
+  "Useful Life" :	
+  "Recovery Periods" :	
+  "Primary Method" :	
+  "AMT" :	
+  "Description" : 
+  "Note" :	
+  "Vendor" :	
+  "Lender" :	
+  "EqType" :	
+  "SlsPrn" :	
+  "Status" :	
+  "Prepayment" :	
+  "Title Y/N" :	
+  "Sort 8" :	
+  "Property Tax Code" :	
+  "Sales Tax Codes 1" :	
+  "Sales Tax Codes 2" :	
+  "Sales Tax Codes 3" :	
+  "Sales Tax Codes 4" :	
+  "Sales Tax Codes 5" :	
+  "Sales Tax Codes 6" :	
+  "Sales Tax Codes 7" :	
+  "Sales Tax Codes 8" :	
+  "Insurance Year" :	
+  "Insurance Month" :	
+  "Insurance Day" :	
+  "Tickler Year" :	
+  "Tickler Month" :	
+  "Tickler Day" :	
+  "Equipment Cost" :	
+  "Depreciation Cost" :	
+  "Lease Receivable" :	
+  "Sold Date Year" :	
+  "Sold Date Month" :	
+  "Sold Date Day" :	
+  "Sold Amount" :	
+  "Residual" :	
+  "not used" :	
+  "IDC" :	
+  "Income" :	
+  "Implicit Rate" :	
+  "Receivable Paid" :	
+  "Advance Payments" :	
+  "Security Deposit" :	
+  "Residual Paid" :	
+  "Suspended Date Year" :	
+  "Suspended Date Month" :	
+  "Suspended Date Day" :	
+  "Terminated Date Year" :	
+  "Terminated Date Month" :
+  "Terminated Date Day" :
+}

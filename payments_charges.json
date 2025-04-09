@@ -1,0 +1,15 @@
+{
+  "Lease Number" : [204950. 204950, 204950, 204950, 204950, 204950], 
+  "Payment Year" : [2025, 2025, 2025, 2025, 2025, 2025],
+  "Payment Month" :	[4, 4, 4, 4, 4, 5],
+  "Payment Day" :	[8, 8, 8, 8, 8, 1],
+  "Type" :	["A", "D", "X", "I", "X", "I"],
+  "Charge Reference" :	[0, 48172, 48172, 48173, 48173, 48174],
+  "Alpha Reference" :	["ACH", "", "ACH", "", "ACH", ""],
+  "Amount1" :	[10000.00, 250.00, 250.00, 98.27, 98.27, 98.27]
+  "Amount2" :	[0.00, 250.00, 0.00, 98.27, 0.00, 0.00]
+  "Charge Type" : ["", "", "D", "", "I", ""]
+  "Description" :	["Advance Payment", "Document", "Charge Payment", "Insurance", "Charge Payment", "Assessed"],
+  "Journal" :	["A", "A", "A", "A", "A", "I"],
+  "Folder" :	[4725, 4725, 4725, 4725, 4725, 4725],
+}
